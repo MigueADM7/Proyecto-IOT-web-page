@@ -34,7 +34,7 @@ body {
 
 #alert-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     margin: 20px 0;
 }
 
@@ -51,7 +51,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%; /* Reducimos el ancho del formulario */
+    width: 65%; /* Reducimos el ancho del formulario */
 }
 
 #login-form label {
@@ -91,7 +91,7 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%;
+    width: 40%;
 }
 
 #login-form button:hover {
@@ -139,6 +139,5 @@ body {
 
 canvas {
     width: 100% !important;
-    height: auto !important;
+    height: 300px !important; /* Ajusta la altura según sea necesario */
 }
-
