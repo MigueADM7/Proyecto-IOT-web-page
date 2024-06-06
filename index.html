@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Login Form -->
+    <div id="login-container">
+        <div id="login-left">
+            <h1>Welcome to the Website</h1>
+            <img src="alerta-temprana-derrumbes.jpg" alt="Alerta Temprana de Derrumbes" id="alert-image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisi est, facilisis ac tellus ac, egestas hendrerit magna.</p>
+        </div>
+        <div id="login-right">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <div id="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button type="submit">Ingresar</button>
+            </form>
+            <div id="extra-links">
+                <a href="#" id="forgot-password">¿Olvidaste tu contraseña?</a>
+                <br>
+                <span>¿No tienes cuenta? <a href="#" id="register">Regístrate</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+<div id="dashboard" style="display: none;">
+    <h2>Dashboard</h2>
+    <div class="widget">
+        <h3>Acelerómetro X</h3>
+        <canvas id="acc-x-chart" width="600" height="400"></canvas>
+        <div id="acc-x-value">0</div>
+    </div>
+    <div class="widget">
+        <h3>Acelerómetro Y</h3>
+        <canvas id="acc-y-chart" width="600" height="400"></canvas>
+        <div id="acc-y-value">0</div>
+    </div>
+    <div class="widget">
+        <h3>Acelerómetro Z</h3>
+        <canvas id="acc-z-chart" width="600" height="400"></canvas>
+        <div id="acc-z-value">0</div>
+    </div>
+    <div class="widget">
+        <h3>Giroscopio X</h3>
+        <canvas id="gyro-x-chart" width="600" height="400"></canvas>
+        <div id="gyro-x-value">0</div>
+    </div>
+    <div class="widget">
+        <h3>Giroscopio Y</h3>
+        <canvas id="gyro-y-chart" width="600" height="400"></canvas>
+        <div id="gyro-y-value">0</div>
+    </div>
+    <div class="widget">
+        <h3>Giroscopio Z</h3>
+        <canvas id="gyro-z-chart" width="600" height="400"></canvas>
+        <div id="gyro-z-value">0</div>
+    </div>
+</div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
