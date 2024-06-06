@@ -114,24 +114,31 @@ body {
 
 #dashboard {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
     justify-content: space-around;
-    margin-top: 20px; /* Ajusta este valor según sea necesario */
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .widget {
-    width: 45%;
-    margin-bottom: 20px;
+    flex: 1;
+    margin: 10px;
     padding: 10px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
+    max-width: 33%; /* Ajusta el tamaño del contenedor del widget */
 }
 
 canvas {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
 }
-
 
