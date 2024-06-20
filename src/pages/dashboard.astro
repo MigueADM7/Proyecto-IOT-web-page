@@ -1,0 +1,24 @@
+---
+import { Button } from "../components/button";
+import {  MyLine } from "../components/dashboard";
+
+---
+
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Dashboard</title>
+
+
+</head>
+<body class="bg-[#fce7d2ff]">
+    <h1 class="text-center text-4xl font-bold my-10">Dashboard</h1>
+   <div class=" flex justify-around">
+    <MyLine  client:only title="Aceleración" label="aceleracion"   />
+    <MyLine  client:only title="Rotación" label="rotacion"   />
+    <Button  client:only  />
+   </div>
+</body>
+</html> 

@@ -1,0 +1,58 @@
+---
+
+---
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="bg-[#fce7d2ff]">
+    <!-- Login Form -->
+    <div id="login-container">
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="font-bold text-4xl">Alerta Temprana de Derrumbes</h1>
+            <img src="alerta-temprana-derrumbes.jpg" alt="Alerta Temprana de Derrumbes" id="alert-image">
+            <p class="p-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisi est, facilisis ac tellus ac, egestas hendrerit magna.</p>
+        </div>
+        <div id="login-right">
+            <h2 class="font-bold text-2xl">Login</h2>
+            <form id="login-form">
+                <label for="username">Usuario:</label>
+                <input class="textinput" type="text" id="username" name="username" required>
+                <label for="password">Contraseña:</label>
+                <input class="textinput" type="password" id="password" name="password" required>
+                <div class="flex flex-row">
+                    <input type="checkbox"  name="remember">
+                    <label for="remember" class=" text-wrap">Remember me</label>
+                </div>
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
+
+    <script  is:inline>
+		document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita el envío del formulario
+
+    // Obtiene los valores de usuario y contraseña
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Simulación de autenticación (puedes agregar tu lógica aquí)
+    if (username === 'admin' && password === 'admin123') {
+        // Muestra el dashboard y oculta el formulario de login
+        localStorage.setItem('isLoggedIn', 'true');
+		window.location.href = '/dashboard';
+    } else {
+        alert('Usuario o contraseña incorrectos');
+    }
+});
+
+
+	</script>
+</body>
+</html>
